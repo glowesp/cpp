@@ -246,6 +246,75 @@ int main(){
         cout << "temp is good";
     }
     
+    bool sunny = true;
+    if(!sunny){
+        std::cout << "it is not sunny";
+    }
+
+    /*temp conversion program from fahrenheit to celcius*/
+
+    double temp;
+    char unit;
+
+    std::cout << "Temperature Conversion";
+    std::cout << "F = fahrenhrit\n";
+    std::cout << "C = celcius\n";
+
+    std::cin >> unit;
+
+    if(unit == 'F' || unit == 'f'){
+        std::cout << "enter temprature in celcius: ";
+        std::cin >> temp;
+
+        temp = (1.8 * temp) + 32.0;
+        std::cout << "temp is " << temp << "F\n";
+    }
+    else if(unit == 'C' || unit == 'c'){
+        std::cout << "enter temprature in fahrenheit: ";
+        std::cin >> temp;
+
+        temp = (temp - 32) / 1.8;
+        std::cout << "temp is " << temp << "F\n";
+    }
+    else {
+        std::cout << "please enter only in C or F\n";
+    }
+
+    // string methods
+
+    std::string name;
+    cout << "enter your name";
+    getline(std::cin, name);
+
+    name.length(); // length of name
+    name.empty(); // empty - returns as boolean value 
+    name.clear(); // clear - clear method
+    name.append("@gmail.com"); // appends a string to another string
+    name.at(0); // finds the char in the string of any given index, e.g 0 = char 1 
+    name.insert(0, "Y"); // inserts string at any given index
+    name.find(' '); // finds the postition of a character and returns with an index, e.g whitespace ' '
+    name.erase(0, 3); // erases the string at given indexes, e.g 0 = first character and 3 = third character
+    name.compare(""); // compares string to another
+
+    // while loops
+
+    std::string name;
+
+    while(name.empty()){ // while name == empty, run code below
+        cout << "enter your name";
+        getline(std::cin, name);
+    }
+
+    // do while loop : do some block of code first, then repeat again if condition is true
+
+    int number;
+    {
+        cout << "enter a positive number";
+        cin >> number;
+    }while(number > 0)
+    
+    cout << "the number is " << number;
+
     return 0;
  
 
