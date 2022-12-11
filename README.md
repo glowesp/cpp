@@ -1,2 +1,2 @@
-# c++
-> learning c++
+# C++
+`learning c++`
